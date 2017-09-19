@@ -50,6 +50,7 @@ imageSearchModifiers = [
 ]
 
 basePhrases = [
+	"tfw",
 	"stingers out",
 	"dingers out",
 	"my team will be there",
@@ -66,7 +67,7 @@ basePhrases = [
     "scene’s dead",
     "scene’s lit",
     "you know where i’m at",
-    "who's with me?"
+    "who's with me?",
     "Honestly",
     "boi"
 ]
@@ -81,6 +82,10 @@ phraseModifiers = [
     "Dong",
     "heck",
     "LOL",
+	"lmao",
+	"lmfao",
+	"sup",
+	"#mood",
     "boi",
     "🔥",
     "😱"
