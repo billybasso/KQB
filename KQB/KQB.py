@@ -49,6 +49,9 @@ imageSearchModifiers = [
 ]
 
 basePhrases = [
+	"stingers out",
+	"dingers out",
+	"my team will be there",
     "literally me",
     "it me",
     "sets tonight?",
