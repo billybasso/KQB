@@ -9,6 +9,15 @@ import facebook
 SEARCH_ENGINE_ID = "016782293291136921152:iomvwhhbvjk"
 GOOGLE_API_KEY = "AIzaSyBwIKySY3CwbVYDTieFVCPauZ4ufnk6WyE"
 
+cities = [
+	"pdx",
+	"kc",
+	"columbus",
+	"new york",
+	"sf",
+	"austin"
+]
+
 imageSearchTerms = [
 	"fidget+spinner",
     "bee",
@@ -22,6 +31,7 @@ imageSearchTerms = [
     "Shrekt",
     "simpsons",
     "futurama",
+	"snail",
     "ding+dang+snack",
     "topo+chico",
     "dank+bee",
@@ -31,6 +41,7 @@ imageSearchTerms = [
     "Rico-the-dragon",
     "heard+of+elf+on+the+shelf",
     "sonic",
+	"rick+and+morty",
     "dumb+bee+game"
 ]
 
@@ -69,7 +80,10 @@ basePhrases = [
     "you know where i’m at",
     "who's with me?",
     "Honestly",
-    "boi"
+	"Malort is the worst",
+	"Anyone looking for a team?",
+    "boi",
+	"anyone going to <city> this weekend?"
 ]
 
 phraseModifiers = [
@@ -86,8 +100,10 @@ phraseModifiers = [
 	"lmfao",
 	"sup",
 	"#mood",
+	"rip"
     "boi",
     "🔥",
+	"<3",
     "😱"
 ]
 
@@ -120,6 +136,7 @@ except:
 
 
 message = random.choice(basePhrases)
+message = message.replace('<city>', random.choice(cities))
 
 #facebook.GraphAPI.get_access
 
