@@ -50,6 +50,7 @@ imageSearchModifiers = [
 
 basePhrases = [
     "literally me",
+    "it me",
     "sets tonight?",
     "mood",
     "anyone at logan?",
