@@ -9,6 +9,24 @@ import facebook
 SEARCH_ENGINE_ID = "016782293291136921152:iomvwhhbvjk"
 GOOGLE_API_KEY = "AIzaSyBwIKySY3CwbVYDTieFVCPauZ4ufnk6WyE"
 
+times = [
+	"15",
+	"20",
+	"an hour",
+	"a couple hours",
+	"3 hours"
+]
+
+setTimes = [
+	"thursday",
+	"tonight",
+	"tomorrow",
+	"monday",
+	"tuesday",
+	"next week",
+	"right now",
+]
+
 cities = [
 	"pdx",
 	"kc",
@@ -61,6 +79,9 @@ imageSearchModifiers = [
 ]
 
 basePhrases = [
+	"headed to the arcade",
+	"headed over in <time>",
+	"headed to <city> in <time>",
 	"tfw",
 	"stingers out",
 	"dingers out",
@@ -83,6 +104,8 @@ basePhrases = [
 	"Malort is the worst",
 	"Anyone looking for a team?",
     "boi",
+	"bae",
+	"sets <set_time>?",
 	"anyone going to <city> this weekend?"
 ]
 
@@ -137,6 +160,8 @@ except:
 
 message = random.choice(basePhrases)
 message = message.replace('<city>', random.choice(cities))
+message = message.replace('<time>', random.choice(times))
+message = message.replace('<set_time>', random.choice(setTimes))
 
 #facebook.GraphAPI.get_access
 
@@ -146,7 +171,7 @@ message = message.replace('<city>', random.choice(cities))
 
 print(imageURL);
 
-if random.uniform(0, 100) < 50:
+while random.uniform(0, 100) < 40:
     modifier = random.choice(phraseModifiers)
     message += " " + modifier
 
