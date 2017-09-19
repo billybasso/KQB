@@ -10,6 +10,7 @@ SEARCH_ENGINE_ID = "016782293291136921152:iomvwhhbvjk"
 GOOGLE_API_KEY = "AIzaSyBwIKySY3CwbVYDTieFVCPauZ4ufnk6WyE"
 
 imageSearchTerms = [
+	"fidget+spinner",
     "bee",
     "haramBEE",
     "bee+game",
