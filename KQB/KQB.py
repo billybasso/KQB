@@ -9,6 +9,32 @@ import facebook
 SEARCH_ENGINE_ID = "016782293291136921152:iomvwhhbvjk"
 GOOGLE_API_KEY = "AIzaSyBwIKySY3CwbVYDTieFVCPauZ4ufnk6WyE"
 
+teamColors = [
+    "gold",
+    "blue",
+]
+
+teamPositions = [
+    "abs",
+    "checks",
+    "skull",
+    "stripes",
+    "queen",
+]
+
+cabParts = [
+    "stick",
+    "button"
+]
+
+cabPartConditions = [
+    "screwy",
+    "loose",
+    "shit",
+    "sticky",
+    "bad",
+]
+
 times = [
 	"15",
 	"20",
@@ -33,7 +59,8 @@ cities = [
 	"columbus",
 	"new york",
 	"sf",
-	"austin"
+	"austin",
+    "mpls",
 ]
 
 imageSearchTerms = [
@@ -44,8 +71,8 @@ imageSearchTerms = [
     "here+come+dat+bee",
     "malort+chicago",
     "killer+queen+game",
-    "#mood",
-    "REKT"
+    "mood",
+    "REKT",
     "Shrekt",
     "simpsons",
     "futurama",
@@ -70,7 +97,7 @@ imageSearchModifiers = [
     "logan+arcade",
     "squad",
     "anime",
-    "donald trump",
+    "donald+trump",
     "vaporwave",
     "Gucci",
     "af",
@@ -82,6 +109,7 @@ basePhrases = [
 	"headed to the arcade",
 	"headed over in <time>",
 	"headed to <city> in <time>",
+    "<team_color> <team_position> <cab_part> is <cab_part_condition>",
 	"tfw",
 	"stingers out",
 	"dingers out",
@@ -106,28 +134,35 @@ basePhrases = [
     "boi",
 	"bae",
 	"sets <set_time>?",
-	"anyone going to <city> this weekend?"
+    "omw",
+	"anyone going to <city> this weekend?",
+    "<team_colors> stick is "
 ]
 
 phraseModifiers = [
     "@Dre Quan",
     "@Josh Debones",
     "@Nikita Mikaros",
-    "Fam",
-    "Ding",
-    "Dang",
-    "Dong",
+    "honestly",
+    "fam",
+    "ding",
+    "dang",
+    "dong",
     "heck",
     "LOL",
 	"lmao",
 	"lmfao",
+    "haha",
 	"sup",
 	"#mood",
-	"rip"
+    "omg",
+	"rip",
+    "pls",
     "boi",
+    "tbh",
     "🔥",
 	"<3",
-    "😱"
+    "😱",
 ]
 
 
@@ -158,10 +193,16 @@ except:
     print("failed to perform image search")
 
 
+    "<team_color> <team_position> <cab_part> is <cab_part_condition>",
+
 message = random.choice(basePhrases)
 message = message.replace('<city>', random.choice(cities))
 message = message.replace('<time>', random.choice(times))
 message = message.replace('<set_time>', random.choice(setTimes))
+message = message.replace('<cab_part>', random.choice(cabParts))
+message = message.replace('<team_color>', random.choice(teamColors))
+message = message.replace('<team_position>', random.choice(teamPositions))
+message = message.replace('<cab_part_condition>', random.choice(cabPartConditions))
 
 #facebook.GraphAPI.get_access
 
