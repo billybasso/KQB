@@ -33,6 +33,7 @@ cabPartConditions = [
     "shit",
     "sticky",
     "bad",
+    "gucci",
 ]
 
 times = [
@@ -79,6 +80,7 @@ imageSearchTerms = [
 	"snail",
     "ding+dang+snack",
     "topo+chico",
+    "la+croix",
     "dank+bee",
     "beedrill",
     "salt",
@@ -99,7 +101,6 @@ imageSearchModifiers = [
     "anime",
     "donald+trump",
     "vaporwave",
-    "Gucci",
     "af",
     "dank"
     "",
@@ -160,6 +161,7 @@ phraseModifiers = [
     "pls",
     "boi",
     "tbh",
+    "gucci",
     "🔥",
 	"<3",
     "😱",
